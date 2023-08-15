@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
 import "./globals.css";
-// import { inter } from './fonts'
+import HeaderLayout from "@/components/Header/HeaderLayout";
 
 export const metadata = {
   title: "CarpTravel",
@@ -12,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Header />
+        <HeaderLayout/>
         {children}
       </body>
     </html>

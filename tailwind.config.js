@@ -9,11 +9,6 @@ module.exports = {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
     },
-    letterSpacing: {
-      'widest': '.185em',
-      'wider': '.1em',
-      'normal': '0',
-      'tighter': '-.04em',},
     extend: {
       container: {
         center: true, 
