@@ -17,7 +17,10 @@ module.exports = {
           sm: '1.25rem',
           md: '1.5rem',
           xl: '1.5rem',
-        },}
+        },},
+        screens: {
+          'xl': '1440px',
+        }
     },
   },
   plugins: [],
