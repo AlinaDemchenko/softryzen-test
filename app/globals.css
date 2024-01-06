@@ -28,16 +28,16 @@
     @apply absolute w-full bg-[#020f08]/50;
   } */
   .hero {
-    @apply pt-[50px] w-screen left-0 top-0 -z-10 h-full bg-[url('/background/hero-background@2x.webp')] bg-cover pb-14 md:pb-0 md:pt-[60px] xl:pb-[80px] xl:pt-[106px];
+    @apply pt-[50px] w-screen left-0 top-0 -z-10 h-full bg-[url('/background/hero-background@2x.webp')] bg-cover md:pb-0 md:pt-[60px] xl:pb-[80px] xl:pt-[106px];
   }
   .section-container {
-    @apply mx-auto px-5 pt-[55px] md:flex md:flex-wrap justify-between md:max-w-3xl md:px-8 md:py-16 xl:max-w-7xl xl:p-6 xl:flex-nowrap;
+    @apply mx-auto px-5 py-[55px] md:flex md:flex-wrap justify-between md:max-w-3xl md:px-8 md:py-16 xl:max-w-7xl xl:p-6 xl:flex-nowrap;
   }
   .paragraph {
     @apply mb-6 w-[158px] text-[10px] font-extralight tracking-normal md:mb-0 md:w-[263px] md:text-sm/4 md:tracking-[.09em] xl:w-full xl:text-base;
   }
   .title{
-    @apply mb-6 text-[40px] font-thin uppercase leading-[1.4] -tracking-[.04em] md:mb-[68px] md:text-[67px] md:leading-[1.15] md:-tracking-[2.68px] xl:text-[6.125rem] xl:leading-[7.45rem];
+    @apply text-[40px] font-thin uppercase leading-[1.4] -tracking-[.04em] md:mb-[68px] md:text-[67px] md:leading-[1.15] md:-tracking-[2.68px] xl:text-[6.125rem] xl:leading-[7.45rem];
   }
   .hero-title {
     @apply relative mb-[31px] text-end text-[37px] font-thin leading-[2.8rem] tracking-[.045em] md:mb-16 md:text-start md:text-[67px] md:leading-none md:tracking-[8.71px] xl:mb-[200px] xl:text-[6.125rem] xl:leading-[7rem] xl:tracking-normal;

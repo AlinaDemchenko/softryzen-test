@@ -12,7 +12,7 @@ function Hero() {
       <div className="section-container">
         {!isDesktopOrLaptop && <SectionTitle />}
         <div className="md:w-[426px] xl:w-[646px]">
-          <h1 className="title xl:mb-[148px]">
+          <h1 className="title mb-6 xl:mb-[148px]">
             <span className="font-medium">Uncover</span> Carpathian’s Secrets
           </h1>
           <p className="paragraph">
