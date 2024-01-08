@@ -21,35 +21,39 @@
 }
 
 @layer components {
-  .header {
-    @apply absolute left-1/2 top-0 z-10 flex w-screen -translate-x-1/2 transform justify-between px-5 pt-9 md:w-full md:px-8 md:pt-[25px] xl:w-[1235px] xl:justify-center xl:px-0 xl:pt-6;
-  }
-  /* .overlay {
-    @apply absolute w-full bg-[#020f08]/50;
-  } */
-  .hero {
-    @apply pt-[50px] w-screen left-0 top-0 -z-10 h-full bg-[url('/background/hero-background@2x.webp')] bg-cover md:pb-0 md:pt-[60px] xl:pb-[80px] xl:pt-[106px];
-  }
   .section-container {
-    @apply mx-auto px-5 py-[55px] md:flex md:flex-wrap justify-between md:max-w-3xl md:px-8 md:py-16 xl:max-w-7xl xl:p-6 xl:flex-nowrap;
+    @apply mx-auto justify-between px-5 py-[55px] md:flex md:max-w-3xl md:flex-wrap md:px-8 md:py-16 xl:max-w-7xl xl:flex-nowrap xl:p-6;
   }
   .paragraph {
     @apply mb-6 w-[158px] text-[10px] font-extralight tracking-normal md:mb-0 md:w-[263px] md:text-sm/4 md:tracking-[.09em] xl:w-full xl:text-base;
   }
-  .title{
-    @apply text-[40px] font-thin uppercase leading-[1.4] -tracking-[.04em] md:mb-[68px] md:text-[67px] md:leading-[1.15] md:-tracking-[2.68px] xl:text-[6.125rem] xl:leading-[7.45rem];
-  }
-  .hero-title {
-    @apply relative mb-[31px] text-end text-[37px] font-thin leading-[2.8rem] tracking-[.045em] md:mb-16 md:text-start md:text-[67px] md:leading-none md:tracking-[8.71px] xl:mb-[200px] xl:text-[6.125rem] xl:leading-[7rem] xl:tracking-normal;
+  .title {
+    @apply text-[40px] font-thin uppercase leading-[1.4] -tracking-[.04em] md:mb-[68px] md:text-[67px] md:leading-[1.15] md:tracking-[2.68px] xl:text-[6.125rem] xl:tracking-[-0.04em];
   }
   .accent-text {
     @apply absolute -bottom-[8px] right-0 text-xs font-light tracking-[.79em] md:-bottom-[17px] md:left-0 md:text-sm md:tracking-[26px] xl:-bottom-[19px] xl:text-base xl:tracking-[2.28em];
+  }
+  .secondary-title {
+    @apply relative mb-[31px] text-end text-[37px] font-thin leading-[2.8rem] tracking-[.045em] md:mb-16 md:text-start md:text-[67px] md:leading-none md:tracking-[8.71px] xl:mb-[200px] xl:text-[6.125rem] xl:leading-[7rem] xl:tracking-normal;
+  }
+  .descr{
+    @apply text-sm md:text-base/5 font-extralight xl:text-lg/6;
+  }
+
+  /*HEADER/MOBILE-MENU*/
+  .header {
+    @apply absolute left-1/2 top-0 z-10 flex w-screen -translate-x-1/2 transform justify-between px-5 pt-9 md:w-full md:px-8 md:pt-[25px] xl:w-[1235px] xl:justify-center xl:px-0 xl:pt-6;
   }
   .nav-list {
     @apply mx-auto flex h-[302px] w-fit flex-col justify-between text-center text-lg tracking-widest md:mt-[11px] md:block md:h-fit md:text-left md:text-sm;
   }
   .nav-link {
     @apply inline-block md:mr-6 xl:mr-14;
+  }
+
+  /*HERO*/
+  .hero {
+    @apply left-0 top-0 -z-10 h-full w-screen bg-[url('/background/hero/hero-background@2x.webp')] bg-cover pt-[50px] md:pb-0 md:pt-[60px] xl:pb-[80px] xl:pt-[106px];
   }
   .hero-btn {
     @apply relative mx-auto flex h-[53px] w-[280px] items-center justify-center bg-white/10 px-16 py-[18px] text-lg font-bold hover:bg-white/20 md:mx-0 md:h-[50px] md:w-[230px] md:py-3.5 xl:h-[71px] xl:w-[293px] xl:py-4 xl:text-[32px];
@@ -60,9 +64,33 @@
   .btn-left-frame {
     @apply absolute left-0 top-0 h-[53px] w-[42px] bg-[url('/icons/frame-left-mob.svg')] bg-cover md:h-[50px] md:w-[35px] md:bg-[url('/icons/frame-left-tab.svg')] xl:h-[71px] xl:w-11 xl:bg-[url('/icons/frame-left-desk.svg')];
   }
-  .about{ 
-    @apply w-screen h-full bg-[url('/background/about@2x.webp')] bg-cover xl:py-20
 
+  /*HERO*/
+  .about {
+    @apply h-full w-screen bg-[url('/background/about/about@2x.webp')] bg-cover xl:py-20;
+  }
+
+  /*SERVICES*/
+  .service-list {
+    @apply  text-left text-[28px]/6 uppercase font-extralight text-white/50;
+  }
+  .is-active {
+    @apply text-left text-white font-medium text-[28px]/6 uppercase bg-[url('/icons/rhombus.svg')] bg-no-repeat bg-left pl-3.5;
+  }
+  .slide-one {
+    @apply h-full w-screen bg-[url('/background/services/Background@2x_result.webp')] bg-cover xl:py-20;
+  }
+  .sslide-two {
+    @apply h-full w-screen bg-[url('/background/services/Background2@2x_result.webp')] bg-cover xl:py-20;
+  }
+  .slide-three {
+    @apply h-full w-screen bg-[url('/background/services/Background3@2x_result.webp')] bg-cover xl:py-20;
+  }
+  .slide-four {
+    @apply h-full w-screen bg-[url('/background/services/Background4@2x_result.webp')] bg-cover xl:py-20;
+  }
+  .slide-five {
+    @apply h-full w-screen bg-[url('/background/services/Background5@2x_result.webp')] bg-cover xl:py-20;
   }
 }
 

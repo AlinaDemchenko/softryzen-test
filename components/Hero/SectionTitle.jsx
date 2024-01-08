@@ -1,6 +1,6 @@
 function SectionTitle() {
   return (
-    <h2 className="hero-title">
+    <h2 className="secondary-title">
       <span className="font-medium md:tracking-normal xl:mr-2">7</span>DAYS
       <span className="accent-text">
         JOURNEY

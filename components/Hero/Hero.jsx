@@ -21,7 +21,7 @@ function Hero() {
         </div>
         <div className="md:w-[230px] xl:w-[305px]">
           {isDesktopOrLaptop && <SectionTitle />}
-          <p className="mb-6 text-justify text-sm font-extralight md:mb-7 md:text-base/5 xl:text-lg/6">
+          <p className="descr mb-6 text-justify md:mb-7">
             We offer you unforgettable trips to the most beautiful parts of the
             Carpathians. Enjoy stunning views, exciting expeditions, and the
             best service!
