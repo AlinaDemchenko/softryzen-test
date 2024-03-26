@@ -1,6 +1,6 @@
 function ServicesList({handlerActive}) {
     return (
-        <ul className="ml-[7px]">
+        <ul className="md:mb-[25px] md:ml-px xl:w-[260px]">
         <li className="md:mb-4 xl:mb-6">
           <button
             onClick={(evt) => handlerActive(evt, "01", "one")}

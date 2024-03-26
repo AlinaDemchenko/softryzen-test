@@ -75,18 +75,18 @@ function Services() {
               alt="Picture of the author"
             />
         </div>
-        <div className="xl:mr-[59px] w-[257px]">
+        <div className="md:w-[221px] xl:mr-[59px] xl:w-[257px]">
           <SlideNumber number={slideData.slideNum} />
           <ServicesList handlerActive={isActive} />
           {isTablet && (
             <>
               <SloganList slideData={slideData.slideNum} />
-              <p className="descr text-justify">{slideData.description}</p>
+              <p className="descr md:text-[13px] xl:text-lg/6 text-justify">{slideData.description}</p>
             </>
           )}
         </div>
         {isDesktop && (
-          <div className="w-[293px] pt-[135px]">
+          <div className="xl:w-[293px] pt-[135px]">
             <SloganList slideData={slideData.slideNum} />
             <p className="descr text-justify">{slideData.description}</p>
           </div>
