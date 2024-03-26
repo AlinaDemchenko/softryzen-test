@@ -19,15 +19,25 @@ function Services() {
     slideNum: "01",
   });
 
-  const imageSrc = () => {
+  const getImageData = () => {
     if (isDesktop) {
-      return `/images/services/desktop/Photo${slideData.slideNum}@2x_result.webp`;
-    }
-    else if (isTablet) {
-      return `/images/services/desktop/Photo${slideData.slideNum}@2x_result.webp`;
-    }
-    else {
-      return `/images/services/desktop/Photo${slideData.slideNum}@2x_result.webp`;
+      return {
+        src: `/images/services/desktop/Photo${slideData.slideNum}@1x_result.webp`,
+        width: 607,
+        height: 429,
+      };
+    } else if (isTablet) {
+      return {
+        src: `/images/services/tablet/Photo${slideData.slideNum}@1x_tab.webp`,
+        width: 463,
+        height: 370,
+      };
+    } else {
+      return {
+        src: `/images/services/tablet/Photo${slideData.slideNum}@1x_tab.webp`,
+        width: 463,
+        height: 370,
+      };
     }
   };
 
@@ -54,20 +64,18 @@ function Services() {
       <div className="slide-four"></div>
       <div className="slide-five"></div>
       <div className="section-container">
-        <div className="mr-[13px]">
-          <h2 className="title leading-tight xl:mb-[23px]">
+        <div className="md:mr-5 xl:mr-[13px]">
+          <h2 className="title leading-tight md:mb-9 xl:mb-[23px]">
             WE <span className="font-medium">OFFER</span>
           </h2>
-          <div className="h-[429px] w-[607px]">
             <Image
-              src={imageSrc()}
-              width={607}
-              height={429}
+              src={getImageData().src}
+              width={getImageData().width}
+              height={getImageData().height}
               alt="Picture of the author"
             />
-          </div>
         </div>
-        <div className="mr-[59px] w-[257px]">
+        <div className="xl:mr-[59px] w-[257px]">
           <SlideNumber number={slideData.slideNum} />
           <ServicesList handlerActive={isActive} />
           {isTablet && (

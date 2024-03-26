@@ -75,10 +75,10 @@
     @apply xl:py-20 relative overflow-hidden max-w-full;
   }
   .service-list {
-    @apply text-left text-[28px]/6 uppercase font-extralight text-white/50;
+    @apply text-left md:text-[22px] md:leading-[0.818] xl:text-[28px]/6 uppercase font-extralight text-white/50;
   }
   .is-active {
-    @apply text-left text-white font-medium text-[28px]/6 uppercase bg-[url('/icons/rhombus.svg')] bg-no-repeat bg-left pl-3.5;
+    @apply text-left text-white font-medium md:text-[22px] md:leading-[0.818] xl:text-[28px]/6 uppercase bg-[url('/icons/rhombus.svg')] bg-no-repeat bg-left pl-3.5;
   }
   .slide-one {
     @apply translate-x-full absolute -z-10 top-0 h-[779px] w-screen bg-[url('/background/services/Background@2x_result.webp')] bg-cover;

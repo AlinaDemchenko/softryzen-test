@@ -1,7 +1,7 @@
 function ServicesList({handlerActive}) {
     return (
         <ul className="ml-[7px]">
-        <li className="mb-6">
+        <li className="md:mb-4 xl:mb-6">
           <button
             onClick={(evt) => handlerActive(evt, "01", "one")}
             className="is-active"
@@ -9,7 +9,7 @@ function ServicesList({handlerActive}) {
             ATVs Traveling
           </button>
         </li>
-        <li className="mb-6">
+        <li className="md:mb-4 xl:mb-6">
           <button
             onClick={(evt) => handlerActive(evt, "02", "two")}
             className="service-list"
@@ -17,7 +17,7 @@ function ServicesList({handlerActive}) {
             Rock climbing
           </button>
         </li>
-        <li className="mb-6">
+        <li className="md:mb-4 xl:mb-6">
           <button
             onClick={(evt) => handlerActive(evt, "03", "three")}
             className="service-list"
@@ -25,7 +25,7 @@ function ServicesList({handlerActive}) {
             Hot air ballooning
           </button>
         </li>
-        <li className="mb-6">
+        <li className="md:mb-4 xl:mb-6">
           <button
             onClick={(evt) => handlerActive(evt, "04", "four")}
             className="service-list"
