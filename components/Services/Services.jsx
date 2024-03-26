@@ -22,19 +22,19 @@ function Services() {
   const getImageData = () => {
     if (isDesktop) {
       return {
-        src: `/images/services/desktop/Photo${slideData.slideNum}@1x_result.webp`,
+        src: `/images/services/desktop/Photo${slideData.slideNum}@2x_result.webp`,
         width: 607,
         height: 429,
       };
     } else if (isTablet) {
       return {
-        src: `/images/services/tablet/Photo${slideData.slideNum}@1x_tab.webp`,
+        src: `/images/services/tablet/Photo${slideData.slideNum}@2x_tab.webp`,
         width: 463,
         height: 370,
       };
     } else {
       return {
-        src: `/images/services/tablet/Photo${slideData.slideNum}@1x_tab.webp`,
+        src: `/images/services/tablet/Photo${slideData.slideNum}@2x_tab.webp`,
         width: 463,
         height: 370,
       };

@@ -1,6 +1,6 @@
 const servicesDescription = {
   one:
-    "Join exciting rafting expeditions on the waterways of the Carpathians. Go through challenging waterways and overcome gusty waves, feel the adrenaline, and enjoy the incredible views of the surrounding mountains.",
+    "Experience the thrill of exploring the Carpathian Mountains with ATVs Traveling. Navigate rugged terrain, conquer steep slopes, and immerse yourself in the breathtaking beauty of the region.",
   two:
     "Overcome the peaks of the Carpathians in a unique way - climbing. Make your own way to the heights and find inner peace in the embrace of the mighty rocks.",
   three:
