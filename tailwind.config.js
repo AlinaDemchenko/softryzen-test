@@ -20,6 +20,24 @@ module.exports = {
         },},
         screens: {
           'xl': '1440px',
+        },
+        keyframes:{
+          sliderBack: {
+            "0%": {
+              transform: "translateX(0)"
+            },
+            "99%": {
+              transform: "translateX(-100%)",
+            },
+            "100%": {
+              transform: "translateX(100%)",
+            },
+          },
+          sliderForward: {
+            "100%": {
+              transform: "translateX(0)",
+            },
+          },
         }
     },
   },

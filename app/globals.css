@@ -28,7 +28,7 @@
     @apply mb-6 w-[158px] text-[10px] font-extralight tracking-normal md:mb-0 md:w-[263px] md:text-sm/4 md:tracking-[.09em] xl:w-full xl:text-base;
   }
   .title {
-    @apply text-[40px] font-thin uppercase leading-[1.4] -tracking-[.04em] md:mb-[68px] md:text-[67px] md:leading-[1.15] md:tracking-[2.68px] xl:text-[6.125rem] xl:tracking-[-0.04em];
+    @apply text-[40px] font-thin uppercase leading-[1.4] -tracking-[.04em] md:mb-[68px] md:text-[67px] md:leading-[1.15] md:tracking-[2.68px] xl:text-[6.125rem] xl:tracking-[-0.04em] xl:leading-none ;
   }
   .accent-text {
     @apply absolute -bottom-[8px] right-0 text-xs font-light tracking-[.79em] md:-bottom-[17px] md:left-0 md:text-sm md:tracking-[26px] xl:-bottom-[19px] xl:text-base xl:tracking-[2.28em];
@@ -71,26 +71,35 @@
   }
 
   /*SERVICES*/
+  .services {
+    @apply xl:py-20 relative overflow-hidden max-w-full;
+  }
   .service-list {
-    @apply  text-left text-[28px]/6 uppercase font-extralight text-white/50;
+    @apply text-left text-[28px]/6 uppercase font-extralight text-white/50;
   }
   .is-active {
     @apply text-left text-white font-medium text-[28px]/6 uppercase bg-[url('/icons/rhombus.svg')] bg-no-repeat bg-left pl-3.5;
   }
   .slide-one {
-    @apply h-full w-screen bg-[url('/background/services/Background@2x_result.webp')] bg-cover xl:py-20;
+    @apply translate-x-full absolute -z-10 top-0 h-[779px] w-screen bg-[url('/background/services/Background@2x_result.webp')] bg-cover;
   }
-  .sslide-two {
-    @apply h-full w-screen bg-[url('/background/services/Background2@2x_result.webp')] bg-cover xl:py-20;
+  .slide-two {
+    @apply  translate-x-full absolute -z-10 top-0 h-[779px] w-screen bg-[url('/background/services/Background2@2x_result.webp')] bg-cover;
   }
   .slide-three {
-    @apply h-full w-screen bg-[url('/background/services/Background3@2x_result.webp')] bg-cover xl:py-20;
+    @apply translate-x-full absolute -z-10 top-0 h-[779px] w-screen bg-[url('/background/services/Background3@2x_result.webp')] bg-cover;
   }
   .slide-four {
-    @apply h-full w-screen bg-[url('/background/services/Background4@2x_result.webp')] bg-cover xl:py-20;
+    @apply translate-x-full absolute -z-10 top-0 h-[779px] w-screen bg-[url('/background/services/Background4@2x_result.webp')] bg-cover;
   }
   .slide-five {
-    @apply h-full w-screen bg-[url('/background/services/Background5@2x_result.webp')] bg-cover xl:py-20;
+    @apply translate-x-full absolute -z-10 top-0 h-[779px] w-screen bg-[url('/background/services/Background5@2x_result.webp')] bg-cover;
+  }
+  .active-slide{
+    @apply animate-[sliderForward_320ms_ease-in_forwards]
+  }
+  .slide-change{
+   @apply animate-[sliderBack_350ms_ease-in_forwards]
   }
 }
 
