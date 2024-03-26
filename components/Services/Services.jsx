@@ -1,14 +1,35 @@
 "use client";
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
 import servicesDescription from "../../public/helpers/texts";
 import SlideNumber from "./SlideNumber";
+import ServicesList from "./ServicesList";
+import SloganList from "./SloganList";
 
 function Services() {
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 1440px)",
+  });
+
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1439 });
+
   const [slideData, setSlideData] = useState({
-    description: servicesDescription.first,
+    description: servicesDescription.one,
     slideNum: "01",
   });
+
+  const imageSrc = () => {
+    if (isDesktop) {
+      return `/images/services/desktop/Photo${slideData.slideNum}@2x_result.webp`;
+    }
+    else if (isTablet) {
+      return `/images/services/desktop/Photo${slideData.slideNum}@2x_result.webp`;
+    }
+    else {
+      return `/images/services/desktop/Photo${slideData.slideNum}@2x_result.webp`;
+    }
+  };
 
   const isActive = (evt, num, descr) => {
     const active = document.querySelector(".is-active");
@@ -39,7 +60,7 @@ function Services() {
           </h2>
           <div className="h-[429px] w-[607px]">
             <Image
-              src={`/images/Photo${slideData.slideNum}@2x_result.webp`}
+              src={imageSrc()}
               width={607}
               height={429}
               alt="Picture of the author"
@@ -48,99 +69,20 @@ function Services() {
         </div>
         <div className="mr-[59px] w-[257px]">
           <SlideNumber number={slideData.slideNum} />
-          <ul className="ml-[7px]">
-            <li className="mb-6">
-              <button
-                onClick={(evt) => isActive(evt, "01", "one")}
-                className="is-active"
-              >
-                ATVs Traveling
-              </button>
-            </li>
-            <li className="mb-6">
-              <button
-                onClick={(evt) => isActive(evt, "02", "two")}
-                className="service-list"
-              >
-                Rock climbing
-              </button>
-            </li>
-            <li className="mb-6">
-              <button
-                onClick={(evt) => isActive(evt, "03", "three")}
-                className="service-list"
-              >
-                Hot air ballooning
-              </button>
-            </li>
-            <li className="mb-6">
-              <button
-                onClick={(evt) => isActive(evt, "04", "four")}
-                className="service-list"
-              >
-                Skydiving
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={(evt) => isActive(evt, "05", "five")}
-                className="service-list"
-              >
-                Rafting
-              </button>
-            </li>
-          </ul>
+          <ServicesList handlerActive={isActive} />
+          {isTablet && (
+            <>
+              <SloganList slideData={slideData.slideNum} />
+              <p className="descr text-justify">{slideData.description}</p>
+            </>
+          )}
         </div>
-        <div className="w-[293px] pt-[135px]">
-          <ul className="mb-7 text-xs/6 font-extralight tracking-[0.2em]">
-            <li className="mb-6">
-              <p
-                className={
-                  slideData.slideNum === "01" ? "opacity-100" : "opacity-0"
-                }
-              >
-                Feel the adrenaline rush
-              </p>
-            </li>
-            <li className="mb-6">
-              <p
-                className={
-                  slideData.slideNum === "02" ? "opacity-100" : "opacity-0"
-                }
-              >
-                Destroy your limitations
-              </p>
-            </li>
-            <li className="mb-12">
-              <p
-                className={
-                  slideData.slideNum === "03" ? "opacity-100" : "opacity-0"
-                }
-              >
-                Get inspired
-              </p>
-            </li>
-            <li className="mb-6">
-              <p
-                className={
-                  slideData.slideNum === "04" ? "opacity-100" : "opacity-0"
-                }
-              >
-                Overcome your fears
-              </p>
-            </li>
-            <li>
-              <p
-                className={
-                  slideData.slideNum === "05" ? "opacity-100" : "opacity-0"
-                }
-              >
-                Trust the flow
-              </p>
-            </li>
-          </ul>
-          <p className="descr text-justify">{slideData.description}</p>
-        </div>
+        {isDesktop && (
+          <div className="w-[293px] pt-[135px]">
+            <SloganList slideData={slideData.slideNum} />
+            <p className="descr text-justify">{slideData.description}</p>
+          </div>
+        )}
       </div>
     </section>
   );
