@@ -14,7 +14,7 @@ function About() {
     <section id="about" className="about">
       <div className="section-container">
         <div className="md:mr-[76px] md:h-[445px] xl:w-[606px] xl:h-fit xl:mr-6">
-          <h2 className="title mb-2 md:mb-[304px] xl:mb-[424px]">
+          <h2 className="title max-md:text-center mb-2 md:mb-[304px] xl:mb-[424px]">
             WHO <span className="font-medium">WE ARE</span>
           </h2>
           {isDesktop && <Description />}
