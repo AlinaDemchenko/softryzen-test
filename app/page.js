@@ -1,5 +1,5 @@
 import About from "@/components/About/About";
-import Career from "@/components/Career";
+import Career from "@/components/Career/Career";
 import Contacts from "@/components/Contacts";
 import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero/Hero";

@@ -69,7 +69,7 @@ function Services() {
       <div className="slide-three"></div>
       <div className="slide-four"></div>
       <div className="slide-five"></div>
-      <div className="section-container">
+      <div className="section-container xl:h-[619px]">
         <div className="max-md:w-[280px] max-md:mx-auto md:mr-5 xl:mr-[13px]">
           <h2 className="title mb-6 md:mb-9 md:leading-tight xl:mb-[23px]">
             WE <span className="font-medium">OFFER</span>

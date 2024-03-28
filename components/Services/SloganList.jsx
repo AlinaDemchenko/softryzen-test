@@ -1,6 +1,6 @@
 function SloganList({slideData}) {
   return (
-    <ul className="max-md:text-end text-xs/6 font-extralight tracking-[0.2em] mb-6 md:mb-[34px] h-6 xl:h-auto xl:mb-7">
+    <ul className="detailed-text max-md:text-end mb-6 md:mb-[34px] h-6 xl:h-auto xl:mb-7">
       <li className="xl:mb-6">
         <p
           className={slideData === "01" ? "opacity-100" : "opacity-0"}
