@@ -1,3 +1,5 @@
+"use client";
+
 function Career() {
   return (
     <section id="career" className="career">
@@ -42,33 +44,89 @@ function Career() {
           </ul>
         </div>
         <div className="pt-4">
-            <p className="descr w-[293px] text-justify ml-auto mb-8">
-              Your chance to join our passionate team in Carpathian tourism.
-              Seeking talented professionals to share our common mission.
-            </p>
-            <p className="descr w-[234px] mb-3.5">
-              Don&apos;t miss your opportunity! Fill out the form right now and join
-              our team!
-            </p>
+          <p className="descr mb-8 ml-auto w-[293px] text-justify">
+            Your chance to join our passionate team in Carpathian tourism.
+            Seeking talented professionals to share our common mission.
+          </p>
+          <p className="descr mb-3.5 w-[234px]">
+            Don&apos;t miss your opportunity! Fill out the form right now and
+            join our team!
+          </p>
           <form action="" className="flex gap-6">
             <div className="w-[290px]">
-              <label className="detailed-text mb-1 block" htmlFor="name">Full name</label>
-              <input className="input mb-6" type="text" id="name" name="name" />
-              <label className="detailed-text mb-1 block" htmlFor="email">E-mail</label>
-              <input className="input mb-6" type="email" id="email" name="email" />
-              <label className="detailed-text mb-1 block" htmlFor="position">Position</label>
-              <input className="input mb-6" type="text" id="position" name="position" />
-              <label className="detailed-text mb-1 block" htmlFor="phone">Phone</label>
-              <input className="input mb-9" type="tel" id="phone" name="phone" />
-              <label>
-              <input type="checkbox" id="confirmation" name="confirmation" />I
-              confirm my consent to the processing of personal data.
+              <label className="detailed-text mb-1 block" htmlFor="name">
+                Full name
               </label>
+              <input
+                className="input mb-6"
+                placeholder="John Smith"
+                type="text"
+                id="name"
+                name="name"
+              />
+              <label className="detailed-text mb-1 block" htmlFor="email">
+                E-mail
+              </label>
+              <input
+                className="input mb-6"
+                placeholder="johnsmith@email.com"
+                type="email"
+                id="email"
+                name="email"
+              />
+              <label className="detailed-text mb-1 block" htmlFor="position">
+                Position
+              </label>
+              <input
+                className="input mb-6"
+                placeholder="Movie maker"
+                type="text"
+                id="position"
+                name="position"
+              />
+              <label className="detailed-text mb-1 block" htmlFor="phone">
+                Phone
+              </label>
+              <div className="relative">
+                <input
+                  className="input mb-9 pl-14"
+                  placeholder="(097) 12 34 567"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                />
+                <span className="absolute start-2 top-0.5 h-7 text-xl font-extralight leading-[1.2]">
+                  + 38
+                </span>
+              </div>
+              <div className="flex gap-x-2">
+                <input
+                  id="confirmation"
+                  type="checkbox"
+                  name="confirmation"
+                  className="h-6 w-6 appearance-none bg-[url('/icons/checkbox_desk.svg')] checked:bg-[url('/icons/checkbox_checked_desk.svg')]"
+                />
+                <label
+                  htmlFor="confirmation"
+                  className="checkbox-label has-[:checked]:text-indigo-900"
+                >
+                  I confirm my consent to the processing of personal data.
+                </label>
+              </div>
             </div>
             <div>
-              <label className="detailed-text block" htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="10" className="input h-[268px] w-[292px]"></textarea>
-              <button type="submit" className="block">SEND</button>
+              <label className="detailed-text block mb-1" htmlFor="message">
+                Message
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                rows="10"
+                className="input h-[268px] w-[292px] mb-6 resize-none"
+              ></textarea>
+              <button type="submit" className="career-button">
+                SEND
+              </button>
             </div>
           </form>
         </div>

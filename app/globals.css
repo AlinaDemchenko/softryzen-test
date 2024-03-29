@@ -75,7 +75,7 @@
     @apply relative max-w-full overflow-hidden xl:py-20;
   }
   .service-list {
-    @apply text-left text-xl font-extralight uppercase leading-[1.1rem] text-white/50 md:text-[22px] md:leading-[0.818] xl:text-[28px]/6;
+    @apply text-left text-xl font-extralight uppercase leading-[1.1rem] text-white/50 hover:text-white md:text-[22px] md:leading-[0.818] xl:text-[28px]/6;
   }
   .is-active {
     @apply bg-[url('/icons/rhombus.svg')] bg-left bg-no-repeat pl-3.5 text-left text-xl font-medium uppercase leading-[1.1rem] text-white md:text-[22px] md:leading-[0.818] xl:text-[28px]/6;
@@ -119,7 +119,13 @@
     @apply text-xs/6 font-extralight w-[285px];
   }
   .input {
-    @apply h-7 w-full bg-white/5;
+    @apply h-7 w-full bg-white/5 text-xl font-extralight px-2 leading-[1.2] placeholder:text-white/20 focus:outline-none;
+  }
+  .checkbox-label{
+    @apply w-[258px] text-xs/6 font-extralight block;
+  }
+  .career-button{
+    @apply ml-auto w-fit block text-[32px]/10 font-medium;
   }
 }
 
