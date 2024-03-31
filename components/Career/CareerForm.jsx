@@ -24,7 +24,7 @@ function CareerForm() {
                 </label>
                 <input
                   {...register("name", { required: "Incorrect name" })}
-                  className="input mb-6"
+                  className="input mb-4 xl:mb-6"
                   placeholder="John Smith"
                   type="text"
                   id="name"
@@ -43,7 +43,7 @@ function CareerForm() {
                 </label>
                 <input
                   {...register("email", { required: "Invalid email" })}
-                  className="input mb-6"
+                  className="input mb-4 xl:mb-6"
                   placeholder="johnsmith@email.com"
                   type="email"
                   id="email"
@@ -59,7 +59,7 @@ function CareerForm() {
               </label>
               <input
                 {...register("position")}
-                className="input mb-6"
+                className="input mb-4 xl:mb-6"
                 placeholder="Movie maker"
                 type="text"
                 id="position"
@@ -74,7 +74,7 @@ function CareerForm() {
                   {...register("phone", { required: "Incorrect phone" })}
                   mask="(999) 999 99 99"
                   maskChar=""
-                  className="input mb-9 pl-14"
+                  className="input mb-4 pl-10 xl:mb-9 xl:pl-14"
                   placeholder="(097) 12 34 567"
                   type="tel"
                   id="phone"
@@ -83,7 +83,7 @@ function CareerForm() {
                   // maxLength="7"
                   pattern="/^\d*$/"
                 />
-                <span className="absolute start-2 top-0.5 h-7 text-xl font-extralight leading-[1.2]">
+                <span className="absolute text-[13px]/6 start-2 h-6 top-[0.8px] xl:top-0.5 xl:h-7 xl:text-xl font-extralight xl:leading-[1.2]">
                   + 38
                 </span>
                 {errors.phone && (

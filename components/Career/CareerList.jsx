@@ -1,6 +1,6 @@
 function CareerList() {
   return (
-    <ul>
+    <ul className="md:w-[225px] xl:w-full">
     <li className="career-list">
       <h3 className="career-list-title">Professional development</h3>
       <p className="career-list-description">
@@ -16,7 +16,7 @@ function CareerList() {
       </p>
     </li>
     <li className="career-list">
-      <h3 className="career-list-title">
+      <h3 className="career-list-title md:mb-7">
         Stimulating work environment
       </h3>
       <p className="career-list-description">
