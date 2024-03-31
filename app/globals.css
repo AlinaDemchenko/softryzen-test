@@ -127,6 +127,12 @@
   .career-button{
     @apply ml-auto w-fit block text-[32px]/10 font-medium;
   }
+  .form-error{
+    @apply absolute top-14 pl-6 w-fit bg-[url('/icons/cross.svg')] bg-no-repeat bg-contain right-0 text-xs/5 font-extralight tracking-[0.2em] text-[#FF5757];
+  }
+  .checkbox{
+    @apply h-6 w-6 appearance-none bg-[url('/icons/checkbox_desk.svg')] checked:bg-[url('/icons/checkbox_checked_desk.svg')];
+  }
 }
 
 button {
