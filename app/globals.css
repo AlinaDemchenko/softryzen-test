@@ -125,13 +125,13 @@
     @apply w-[258px] text-xs/6 font-extralight block;
   }
   .career-button{
-    @apply ml-auto w-fit block text-[32px]/10 font-medium;
+    @apply ml-auto w-fit block text-3xl/tight xl:text-[32px]/10 font-medium;
   }
   .form-error{
     @apply absolute top-14 pl-6 w-fit bg-[url('/icons/cross.svg')] bg-no-repeat bg-contain right-0 text-xs/5 font-extralight tracking-[0.2em] text-[#FF5757];
   }
   .checkbox{
-    @apply h-6 w-6 appearance-none bg-[url('/icons/checkbox_desk.svg')] checked:bg-[url('/icons/checkbox_checked_desk.svg')];
+    @apply h-[22px] w-[22px] bg-[url('/icons/checkbox.svg')] checked:bg-[url('/icons/checkbox_checked.svg')] xl:h-6 xl:w-6 appearance-none xl:bg-[url('/icons/checkbox_desk.svg')] xl:checked:bg-[url('/icons/checkbox_checked_desk.svg')];
   }
 }
 

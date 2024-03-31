@@ -17,7 +17,7 @@ function CareerForm() {
               console.log(data);
             })}
           >
-            <div className="w-[290px]">
+            <div className="w-[222px] xl:w-[290px]">
               <div className="relative">
                 <label className="detailed-text mb-1 block" htmlFor="name">
                   Full name
@@ -98,13 +98,13 @@ function CareerForm() {
                   name="confirmation"
                   className={
                     errors.confirmation
-                      ? "checkbox bg-[url('/icons/error_checkbox.svg')]"
+                      ? "checkbox bg-[url('/icons/error_checkbox.svg')] xl:bg-[url('/icons/error_checkbox_desk.svg')]"
                       : "checkbox"
                   }
                 />
                 <label
                   htmlFor="confirmation"
-                  className="checkbox-label has-[:checked]:text-indigo-900"
+                  className="checkbox-label md:w-[192px] md:leading-[1.83] xl:w-full xl:leading-6"
                 >
                   I confirm my consent to the processing of personal data.
                 </label>
@@ -119,7 +119,7 @@ function CareerForm() {
                 name="message"
                 id="message"
                 rows="10"
-                className="input mb-6 h-[268px] w-[292px] resize-none"
+                className="input mb-[9px] xl:mb-6 h-[228px] w-[221px] xl:h-[268px] xl:w-[292px] resize-none"
                 minLength="2"
                 maxLength="600"
               ></textarea>
