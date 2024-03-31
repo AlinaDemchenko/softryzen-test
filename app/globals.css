@@ -53,7 +53,7 @@
 
   /*HERO*/
   .hero {
-    @apply left-0 top-0 -z-10 h-full w-screen bg-[url('/background/hero/hero-background@2x.webp')] bg-cover pt-[50px] md:pb-0 md:pt-[60px] xl:pb-[80px] xl:pt-[106px];
+    @apply bg-center left-0 top-0 -z-10 h-full w-screen bg-[url('/background/hero/hero-background@2x.webp')] bg-cover pt-[50px] md:pb-0 md:pt-[60px] xl:pb-[80px] xl:pt-[106px];
   }
   .hero-btn {
     @apply relative mx-auto flex h-[53px] w-[280px] items-center justify-center bg-white/10 px-16 py-[18px] text-lg font-bold hover:bg-white/20 md:mx-0 md:h-[50px] md:w-[230px] md:py-3.5 xl:h-[71px] xl:w-[293px] xl:py-4 xl:text-[32px];
@@ -81,19 +81,19 @@
     @apply bg-[url('/icons/rhombus.svg')] bg-left bg-no-repeat pl-3.5 text-left text-xl font-medium uppercase leading-[1.1rem] text-white md:text-[22px] md:leading-[0.818] xl:text-[28px]/6;
   }
   .slide-one {
-    @apply absolute top-0 -z-10 h-[851px] w-screen translate-x-full bg-[url('/background/services/Background@2x_result.webp')] bg-cover md:h-[780px];
+    @apply bg-center absolute top-0 -z-10 h-[851px] w-screen translate-x-full bg-[url('/background/services/Background@2x_result.webp')] bg-cover md:h-[780px];
   }
   .slide-two {
-    @apply absolute top-0 -z-10 h-[851px] w-screen translate-x-full bg-[url('/background/services/Background2@2x_result.webp')] bg-cover md:h-[780px];
+    @apply bg-center absolute top-0 -z-10 h-[851px] w-screen translate-x-full bg-[url('/background/services/Background2@2x_result.webp')] bg-cover md:h-[780px];
   }
   .slide-three {
-    @apply absolute top-0 -z-10 h-[851px] w-screen translate-x-full bg-[url('/background/services/Background3@2x_result.webp')] bg-cover md:h-[780px];
+    @apply bg-center absolute top-0 -z-10 h-[851px] w-screen translate-x-full bg-[url('/background/services/Background3@2x_result.webp')] bg-cover md:h-[780px];
   }
   .slide-four {
-    @apply absolute top-0 -z-10 h-[851px] w-screen translate-x-full bg-[url('/background/services/Background4@2x_result.webp')] bg-cover md:h-[780px];
+    @apply bg-center absolute top-0 -z-10 h-[851px] w-screen translate-x-full bg-[url('/background/services/Background4@2x_result.webp')] bg-cover md:h-[780px];
   }
   .slide-five {
-    @apply absolute top-0 -z-10 h-[851px] w-screen translate-x-full bg-[url('/background/services/Background5@2x_result.webp')] bg-cover md:h-[780px];
+    @apply bg-center absolute top-0 -z-10 h-[851px] w-screen translate-x-full bg-[url('/background/services/Background5@2x_result.webp')] bg-cover md:h-[780px];
   }
   .active-slide {
     @apply animate-[sliderForward_320ms_ease-in_forwards];
@@ -107,22 +107,22 @@
 
   /*CAREER*/
   .career {
-    @apply h-full w-screen bg-[url('/background/career/career@2x.webp')] bg-cover xl:py-20;
+    @apply bg-center h-full w-screen bg-[url('/background/career/career@2x.webp')] bg-cover xl:py-20;
   }
   .career-list {
     @apply md:mb-6 xl:flex gap-6 xl:mb-[21px];
   }
   .career-list-title {
-    @apply md:mb-2 md:leading-5 xl:w-[283px] text-end xl:mb-0 xl:text-lg/6;
+    @apply max-md:text-sm mb-2 md:leading-5 xl:w-[283px] text-end xl:mb-0 xl:text-lg/6;
   }
   .career-list-description {
-    @apply md:text-xs/5 xl:leading-6 font-extralight w-[221px] md:text-end xl:text-left xl:w-[285px];
+    @apply mb-4 text-xs/5 xl:leading-6 font-extralight md:w-[221px] text-end xl:text-left xl:w-[285px];
   }
   .input {
     @apply h-6 w-full text-[13px]/6 bg-white/5 font-extralight px-2 placeholder:text-white/20 focus:outline-none xl:leading-[1.2] xl:text-xl xl:h-7;
   }
   .checkbox-label{
-    @apply w-[258px] text-xs/6 font-extralight block;
+    @apply md:w-[192px] xl:w-[258px] text-xs leading-[1.83] xl:leading-6 font-extralight block;
   }
   .career-button{
     @apply ml-auto w-fit block text-3xl/tight xl:text-[32px]/10 font-medium;
@@ -131,7 +131,7 @@
     @apply absolute top-14 pl-6 w-fit bg-[url('/icons/cross.svg')] bg-no-repeat bg-contain right-0 text-xs/5 font-extralight tracking-[0.2em] text-[#FF5757];
   }
   .checkbox{
-    @apply h-[22px] w-[22px] bg-[url('/icons/checkbox.svg')] checked:bg-[url('/icons/checkbox_checked.svg')] xl:h-6 xl:w-6 appearance-none xl:bg-[url('/icons/checkbox_desk.svg')] xl:checked:bg-[url('/icons/checkbox_checked_desk.svg')];
+    @apply h-[22px] min-w-[22px] bg-[url('/icons/checkbox.svg')] checked:bg-[url('/icons/checkbox_checked.svg')] xl:h-6 xl:w-6 appearance-none xl:bg-[url('/icons/checkbox_desk.svg')] xl:checked:bg-[url('/icons/checkbox_checked_desk.svg')];
   }
 }
 

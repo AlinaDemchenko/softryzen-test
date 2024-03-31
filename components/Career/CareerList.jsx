@@ -1,6 +1,6 @@
 function CareerList() {
   return (
-    <ul className="md:w-[225px] xl:w-full">
+    <ul className="w-[181px] md:w-[225px] xl:w-full">
     <li className="career-list">
       <h3 className="career-list-title">Professional development</h3>
       <p className="career-list-description">
@@ -25,7 +25,7 @@ function CareerList() {
     </li>
     <li className="career-list">
       <h3 className="career-list-title">Exciting challenges</h3>
-      <p className="career-list-description">
+      <p className="career-list-description mb-0">
         Unleash your potential through unforgettable projects showcasing
         Carpathian beauty.
       </p>
