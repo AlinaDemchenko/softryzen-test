@@ -146,6 +146,9 @@
   }
   .button-next,
   .button-prev {
-    @apply -bottom-2 text-white absolute z-50 text-[33px] w-[294px] font-thin uppercase;
+    @apply bottom-[17px] xl:-bottom-2 text-white absolute z-50 text-[33px] xl:w-[294px] font-thin uppercase;
+  }
+  .gallery-list{
+    @apply mx-auto;
   }
 }
