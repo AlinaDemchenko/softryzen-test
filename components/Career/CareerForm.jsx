@@ -77,7 +77,7 @@ function CareerForm({ query }) {
         </label>
         <div className="relative">
           <InputMask
-            {...register("phone", { required: "Incorrect phone" })}
+            {...register("phone", { required: "Incorrect phone", minLength: {value: 7, message: "Incorrect phone"}})}
             mask="(999) 999 99 99"
             maskChar=""
             className="input mb-4 pl-10 xl:mb-9 xl:pl-14"
@@ -85,9 +85,8 @@ function CareerForm({ query }) {
             type="tel"
             id="phone"
             name="phone"
-            minLength="7"
           />
-          <span className="absolute start-2 top-[0.8px] h-6 text-[13px]/6 font-extralight xl:top-0.5 xl:h-7 xl:text-xl xl:leading-[1.2]">
+          <span className="absolute start-2 top-0.5 md:top-[0.8px] h-6 text-[13px]/6 font-extralight xl:top-0.5 xl:h-7 xl:text-xl xl:leading-[1.2]">
             + 38
           </span>
           {errors.phone && (

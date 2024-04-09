@@ -20,7 +20,8 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.51.2",
     "react-input-mask": "^2.0.4",
-    "react-responsive": "^9.0.2"
+    "react-responsive": "^9.0.2",
+    "swiper": "^11.1.0"
   },
   "devDependencies": {
     "@types/node": "18.14.2",

@@ -21,7 +21,7 @@ function Career() {
               CHOOSE <span className="font-medium">US</span>
             </h2>
             {!isDesktop && (
-              <p className="descr mb-9 md:mb-[5px] ml-auto mb:ml-[115px] md:mt-2 md:inline-block w-[179px] md:w-[221px] md:text-justify md:text-[13px]">
+              <p className="descr mb-9 md:mb-[5px] ml-auto md:ml-[115px] md:mt-2 md:inline-block w-[179px] md:w-[221px] md:text-justify md:text-[13px]">
                 Your chance to join our passionate team in Carpathian tourism.
                 Seeking talented professionals to share our common mission.
               </p>
