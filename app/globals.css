@@ -151,4 +151,15 @@
   .gallery-list{
     @apply mx-auto;
   }
+
+    /*CONTACTS*/
+    .contacts{
+      @apply h-full w-screen bg-[url('/background/contacts/contacts@2x.webp')] bg-cover bg-center xl:py-20;
+    }
+    .contact-list-item{
+      @apply flex gap-5;
+    }
+    .contact-link{
+      @apply text-end md:w-[187px] xl:w-[210px];
+    }
 }

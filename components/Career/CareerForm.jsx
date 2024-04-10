@@ -21,7 +21,7 @@ function CareerForm({ query }) {
   return (
     <form
       action=""
-      className="gap-6 md:flex"
+      className="gap-6 md:flex w-[279px] md:w-full mx-auto"
       onSubmit={handleSubmit((data) => {
                 console.log(data);
                 reset()
@@ -34,7 +34,7 @@ function CareerForm({ query }) {
           </label>
           <input
             {...register("name", { required: "Incorrect name" })}
-            className="input mb-4 xl:mb-6"
+            className={`input mb-4 xl:mb-6 ${errors.name ? "text-[#FF5757]" : ""}`} 
             placeholder="John Smith"
             type="text"
             id="name"
@@ -51,7 +51,7 @@ function CareerForm({ query }) {
           </label>
           <input
             {...register("email", { required: "Invalid email" })}
-            className="input mb-4 xl:mb-6"
+            className={`input mb-4 xl:mb-6 ${errors.email ? "text-[#FF5757]" : ""}`}
             placeholder="johnsmith@email.com"
             type="email"
             id="email"
@@ -80,13 +80,13 @@ function CareerForm({ query }) {
             {...register("phone", { required: "Incorrect phone", minLength: {value: 7, message: "Incorrect phone"}})}
             mask="(999) 999 99 99"
             maskChar=""
-            className="input mb-4 pl-10 xl:mb-9 xl:pl-14"
+            className={`input mb-4 pl-10 xl:mb-9 xl:pl-14 ${errors.phone ? "text-[#FF5757]" : ""}`}
             placeholder="(097) 12 34 567"
             type="tel"
             id="phone"
             name="phone"
           />
-          <span className="absolute start-2 top-0.5 md:top-[0.8px] h-6 text-[13px]/6 font-extralight xl:top-0.5 xl:h-7 xl:text-xl xl:leading-[1.2]">
+          <span className={`absolute start-2 top-0.5 md:top-[0.8px] h-6 text-[13px]/6 font-extralight xl:top-0.5 xl:h-7 xl:text-xl xl:leading-[1.2] ${errors.phone ? "text-[#FF5757]" : ""}`}>
             + 38
           </span>
           {errors.phone && (
