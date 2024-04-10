@@ -23,7 +23,7 @@ function ContactsForm() {
   return (
     <form
       action=""
-      className="flex xl:w-[607px] flex-wrap gap-x-5"
+      className="md:flex xl:w-[607px] md:flex-wrap md:gap-x-5"
       onSubmit={handleSubmit((data) => {
         console.log(data);
         reset();
@@ -31,7 +31,7 @@ function ContactsForm() {
     >
       {!isDesktop && (
         <div>
-          <div className="relative w-[221px] mb-[28px] xl:mb-7">
+          <div className="relative md:w-[221px] mb-[25px] md:mb-[28px] xl:mb-7">
             <label className="detailed-text mb-1 block" htmlFor="name">
               Full name
             </label>
@@ -50,13 +50,13 @@ function ContactsForm() {
               <p className="form-error"> {errors.name.message}</p>
             )}
           </div>
-          <div className="relative w-[221px]">
+          <div className="relative mb-6 md:mb-0 md:w-[221px]">
             <label className="detailed-text mb-1 block" htmlFor="email">
               E-mail
             </label>
             <input
               {...register("email", { required: "Invalid email" })}
-              className={`input mb-10 ${errors.email ? "text-[#FF5757]" : ""}`}
+              className={`input ${errors.email ? "text-[#FF5757]" : ""}`}
               placeholder="johnsmith@email.com"
               type="email"
               id="email"
@@ -89,13 +89,13 @@ function ContactsForm() {
         </div>
       )}
       {isDesktop && (
-        <div className="relative w-[294px]">
+        <div className="relative mb-10 w-[294px]">
           <label className="detailed-text mb-1 block" htmlFor="email">
             E-mail
           </label>
           <input
             {...register("email", { required: "Invalid email" })}
-            className={`input mb-10 ${errors.email ? "text-[#FF5757]" : ""}`}
+            className={`input ${errors.email ? "text-[#FF5757]" : ""}`}
             placeholder="johnsmith@email.com"
             type="email"
             id="email"
@@ -114,7 +114,7 @@ function ContactsForm() {
           name="message"
           id="message"
           rows="10"
-          className="input mb-4 xl:mb-6 h-[221px] xl:h-[174px] w-[463px] xl:w-[607px] resize-none"
+          className="input mb-4 xl:mb-6 h-[221px] xl:h-[174px] md:w-[463px] xl:w-[607px] resize-none"
           minLength="2"
           maxLength="600"
         ></textarea>

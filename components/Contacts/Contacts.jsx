@@ -9,7 +9,7 @@ function Contacts() {
           CONTACT <span className="font-medium">US</span>
         </h2>
         <div className="xl:flex">
-          <address className="pl-[34px] mb-16 xl:mb-0 xl:pl-[83px]">
+          <address className="pl-4 mb-3 w-fit mx-auto md:pl-[34px] md:mb-16 xl:mb-0 xl:pl-[83px]">
             <ContactsList />
           </address>
         <ContactsForm />
