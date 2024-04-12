@@ -12,6 +12,7 @@ function Gallery() {
 
   return (
     <section id="gallery" className="gallery">
+      <div className="gallery-bg"></div>
       <div className="section-container block px-5 md:px-0">
         <h2 className="title mx-auto text-start mb-6 md:mx-0 md:mb-[72px] md:text-center md:leading-tight w-[280px] md:w-full xl:mb-[15px] xl:ml-[23px] xl:text-start">
           OUR <span className="font-medium">GALLERY</span>

@@ -64,7 +64,7 @@ function Services() {
 
   return (
     <section id="services" className="services">
-      <div className="slide-one active-slide"></div>
+      <div id="background" className="slide-one active-slide"></div>
       <div className="slide-two"></div>
       <div className="slide-three"></div>
       <div className="slide-four"></div>

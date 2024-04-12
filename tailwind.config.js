@@ -38,6 +38,26 @@ module.exports = {
               transform: "translateX(0)",
             },
           },
+          kenburnsRight:{
+            "0%": {
+                      transform: "scale(1) translate(0, 0)",
+                      transformOrigin: "84% 50%"
+            },
+            "100%": {
+                      transform: "scale(1.15) translateX(15px)",
+                      transformOrigin: "right"
+            }
+          },
+          kenburnsLeft:{
+            "0%": {
+                      transform: "scale(1) translate(0, 0)",
+                      transformOrigin: "16% 50%"
+            },
+            "100%": {
+                      transform: "scale(1.15) translate(-20px, 15px)",
+                      transformOrigin: "left"
+            }
+          }
         }
     },
   },

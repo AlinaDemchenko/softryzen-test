@@ -18,6 +18,22 @@
   body {
     @apply bg-[rgb(23,36,41)] font-sans text-white;
   }
+
+  main {
+    @apply h-screen overflow-y-auto overscroll-y-contain;
+    @media only screen and (min-width: 768px) {
+      scroll-snap-type: y mandatory;
+    }
+  }
+
+  main > * {
+    @apply h-full w-screen;
+    scroll-snap-align: start;
+  }
+
+  /* section {
+    @apply;
+  } */
 }
 
 @layer components {
@@ -39,6 +55,12 @@
   .descr {
     @apply text-sm font-extralight md:text-base/5 xl:text-lg/6;
   }
+  .parallax-right{
+    @apply animate-[kenburnsRight_4s_ease-out_both];
+  }
+  .parallax-left{
+    @apply animate-[kenburnsLeft_4s_ease-out_both];
+  }
 
   /*HEADER/MOBILE-MENU*/
   .header {
@@ -53,7 +75,10 @@
 
   /*HERO*/
   .hero {
-    @apply left-0 top-0 -z-10 h-full w-screen bg-[url('/background/hero/hero-background@2x.webp')] bg-cover bg-center pt-[50px] md:pb-0 md:pt-[60px] xl:pb-[80px] xl:pt-[106px];
+    @apply h-fit left-0 top-0 w-screen pt-[50px] md:pt-[60px] xl:pb-[80px] xl:pt-[106px] relative;
+  }
+  .hero-bg{
+   @apply bg-cover bg-center absolute top-0 -z-20 w-screen bg-[url('/background/hero/hero-background@2x.webp')] h-full; 
   }
   .hero-btn {
     @apply relative mx-auto flex h-[53px] w-[280px] items-center justify-center bg-white/10 px-16 py-[18px] text-lg font-bold hover:bg-white/20 md:mx-0 md:h-[50px] md:w-[230px] md:py-3.5 xl:h-[71px] xl:w-[293px] xl:py-4 xl:text-[32px];
@@ -67,12 +92,15 @@
 
   /*ABOUT*/
   .about {
-    @apply h-full w-screen bg-[url('/background/about/about@2x.webp')] bg-cover xl:py-20;
+    @apply h-fit w-screen xl:py-20 relative overflow-hidden;
+  }
+  .about-bg {
+    @apply bg-cover bg-center absolute top-0 -z-10 w-screen bg-[url('/background/about/about@2x.webp')] h-full;
   }
 
   /*SERVICES*/
   .services {
-    @apply relative max-w-full overflow-hidden xl:py-20;
+    @apply h-fit relative max-w-full overflow-hidden xl:py-20;
   }
   .service-list {
     @apply text-left text-xl font-extralight uppercase leading-[1.1rem] text-white/50 hover:text-white md:text-[22px] md:leading-[0.818] xl:text-[28px]/6;
@@ -107,7 +135,10 @@
 
   /*CAREER*/
   .career {
-    @apply h-full w-screen bg-[url('/background/career/career@2x.webp')] bg-cover bg-center xl:py-20;
+    @apply h-fit w-screen relative xl:py-20;
+  }
+  .career-bg{
+    @apply bg-cover bg-center absolute top-0 -z-10 w-screen bg-[url('/background/career/career@2x.webp')] h-full;
   }
   .career-list {
     @apply gap-6 md:mb-6 xl:mb-[21px] xl:flex;
@@ -136,7 +167,10 @@
 
   /*GALLERY*/
   .gallery {
-    @apply h-full w-screen bg-[url('/background/gallery/gallery@2x.webp')] bg-cover bg-center xl:py-20;
+    @apply h-fit w-screen relative xl:py-20;
+  }
+  .gallery-bg{
+    @apply bg-cover bg-center absolute top-0 -z-10 w-screen bg-[url('/background/gallery/gallery@2x.webp')] h-full;
   }
   .active-image {
     @apply mx-auto;
@@ -154,7 +188,7 @@
 
     /*CONTACTS*/
     .contacts{
-      @apply h-full w-screen bg-[url('/background/contacts/contacts@2x.webp')] bg-cover bg-center xl:py-20;
+      @apply h-fit w-screen bg-[url('/background/contacts/contacts@2x.webp')] bg-cover bg-center xl:py-20;
     }
     .contact-list-item{
       @apply flex gap-5;

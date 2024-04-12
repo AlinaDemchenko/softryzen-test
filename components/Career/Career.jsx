@@ -15,18 +15,19 @@ function Career() {
   return (
     <>
       <section id="career" className="career">
+        <div className="career-bg"></div>
         <div className="section-container gap-x-6 md:pl-7 xl:pl-6">
           <div>
-            <h2 className="title mb-6 inline-block align-top md:leading-tight md:mb-0 xl:mb-6 xl:align-baseline">
+            <h2 className="title mb-6 inline-block align-top md:mb-0 md:leading-tight xl:mb-6 xl:align-baseline">
               CHOOSE <span className="font-medium">US</span>
             </h2>
             {!isDesktop && (
-              <p className="descr mb-9 md:mb-[5px] ml-auto md:ml-[115px] md:mt-2 md:inline-block w-[179px] md:w-[221px] md:text-justify md:text-[13px]">
+              <p className="descr mb-9 ml-auto w-[179px] md:mb-[5px] md:ml-[115px] md:mt-2 md:inline-block md:w-[221px] md:text-justify md:text-[13px]">
                 Your chance to join our passionate team in Carpathian tourism.
                 Seeking talented professionals to share our common mission.
               </p>
             )}
-            <p className="mb-9 md:mb-[55px] ml-[100px] mb:ml-20 text-3xl font-extralight uppercase xl:mb-[45px] xl:ml-[123px] xl:text-4xl">
+            <p className="mb:ml-20 mb-9 ml-[100px] text-3xl font-extralight uppercase md:mb-[55px] xl:mb-[45px] xl:ml-[123px] xl:text-4xl">
               Why us ?
             </p>
             {isDesktop && <CareerList />}
@@ -61,12 +62,13 @@ function Career() {
       </section>
       {isMobile && (
         <section className="career">
+          <div className="career-bg"></div>
           <div className="section-container gap-x-6 md:pl-7 xl:pl-6">
-            <p className="descr ml-auto mb-6 w-[179px]">
-              Don&apos;t miss your opportunity! <br /> Fill out the form right now and
-              join our team!
+            <p className="descr mb-6 ml-auto w-[179px]">
+              Don&apos;t miss your opportunity! <br /> Fill out the form right
+              now and join our team!
             </p>
-            <CareerForm query={isMobile}/>
+            <CareerForm query={isMobile} />
           </div>
         </section>
       )}

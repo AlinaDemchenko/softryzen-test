@@ -2,8 +2,34 @@
 import Description from "./Description";
 import Slogan from "./Slogan";
 import { useMediaQuery } from "react-responsive";
+import { useEffect, useRef } from 'react';
 
 function About() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleIntersection = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('parallax-left');
+        } else {
+          entry.target.classList.remove('parallax-left');
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, { threshold: 0 });
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);  
+
   const isDesktop = useMediaQuery({
     query: "(min-width: 1440px)",
   });
@@ -12,6 +38,7 @@ function About() {
 
   return (
     <section id="about" className="about">
+      <div ref={sectionRef} className="about-bg"></div>
       <div className="section-container">
         <div className="md:mr-[76px] md:h-[445px] xl:w-[606px] xl:h-fit xl:mr-6">
           <h2 className="title max-md:text-center mb-2 md:mb-[304px] xl:mb-[424px]">
