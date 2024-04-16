@@ -1,24 +1,27 @@
 "use client";
 import SectionTitle from "./SectionTitle";
 import Link from "next/link";
+import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 function Hero() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
     const handleIntersection = (entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('parallax-right');
+          entry.target.classList.add("parallax-right");
         } else {
-          entry.target.classList.remove('parallax-right');
+          entry.target.classList.remove("parallax-right");
         }
       });
     };
 
-    const observer = new IntersectionObserver(handleIntersection, { threshold: 0 });
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0,
+    });
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
@@ -28,7 +31,7 @@ function Hero() {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []); 
+  }, []);
 
   const isDesktopOrLaptop = useMediaQuery({
     query: "(min-width: 768px)",
@@ -36,7 +39,15 @@ function Hero() {
 
   return (
     <section className="hero">
-      <div ref={sectionRef} className="hero-bg"></div>
+      <div ref={sectionRef} className="hero-bg">
+        <Image
+          src="/background/hero/hero-background@2x.webp"
+          alt=" Carpathian landscape"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+        />
+      </div>
       <div className="section-container">
         {!isDesktopOrLaptop && <SectionTitle />}
         <div className="w-[280px] max-md:mx-auto md:w-[426px] xl:w-[646px]">

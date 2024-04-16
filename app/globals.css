@@ -30,10 +30,6 @@
     @apply h-full w-screen;
     scroll-snap-align: start;
   }
-
-  /* section {
-    @apply;
-  } */
 }
 
 @layer components {
@@ -64,7 +60,7 @@
 
   /*HEADER/MOBILE-MENU*/
   .header {
-    @apply absolute left-1/2 top-0 z-10 flex w-screen -translate-x-1/2 transform justify-between px-5 pt-9 md:w-full md:px-8 md:pt-[25px] xl:w-[1235px] xl:justify-center xl:px-0 xl:pt-6;
+    @apply absolute  left-1/2 top-0 z-10 flex w-screen -translate-x-1/2 transform justify-between px-5 pt-9 md:w-full md:px-8 md:pt-[25px] xl:w-[1235px] xl:justify-center xl:px-0 xl:pt-6;
   }
   .nav-list {
     @apply mx-auto flex h-[302px] w-fit flex-col justify-between text-center text-lg tracking-widest md:mt-[11px] md:block md:h-fit md:text-left md:text-sm;
@@ -78,7 +74,7 @@
     @apply h-fit left-0 top-0 w-screen pt-[50px] md:pt-[60px] xl:pb-[80px] xl:pt-[106px] relative;
   }
   .hero-bg{
-   @apply bg-cover bg-center absolute top-0 -z-20 w-screen bg-[url('/background/hero/hero-background@2x.webp')] h-full; 
+   @apply absolute top-0 -z-20 w-screen h-full; 
   }
   .hero-btn {
     @apply relative mx-auto flex h-[53px] w-[280px] items-center justify-center bg-white/10 px-16 py-[18px] text-lg font-bold hover:bg-white/20 md:mx-0 md:h-[50px] md:w-[230px] md:py-3.5 xl:h-[71px] xl:w-[293px] xl:py-4 xl:text-[32px];
@@ -95,7 +91,7 @@
     @apply h-fit w-screen xl:py-20 relative overflow-hidden;
   }
   .about-bg {
-    @apply bg-cover bg-center absolute top-0 -z-10 w-screen bg-[url('/background/about/about@2x.webp')] h-full;
+    @apply absolute top-0 -z-10 w-screen h-full;
   }
 
   /*SERVICES*/
@@ -109,19 +105,19 @@
     @apply bg-[url('/icons/rhombus.svg')] bg-left bg-no-repeat pl-3.5 text-left text-xl font-medium uppercase leading-[1.1rem] text-white md:text-[22px] md:leading-[0.818] xl:text-[28px]/6;
   }
   .slide-one {
-    @apply absolute top-0 -z-10 h-[851px] w-screen translate-x-full bg-[url('/background/services/Background@2x_result.webp')] bg-cover bg-center md:h-[780px];
+    @apply absolute top-0 -z-10 h-[851px] w-screen translate-x-full md:h-[780px];
   }
   .slide-two {
-    @apply absolute top-0 -z-10 h-[851px] w-screen translate-x-full bg-[url('/background/services/Background2@2x_result.webp')] bg-cover bg-center md:h-[780px];
+    @apply absolute top-0 -z-10 h-[851px] w-screen translate-x-full md:h-[780px];
   }
   .slide-three {
-    @apply absolute top-0 -z-10 h-[851px] w-screen translate-x-full bg-[url('/background/services/Background3@2x_result.webp')] bg-cover bg-center md:h-[780px];
+    @apply absolute top-0 -z-10 h-[851px] w-screen translate-x-full md:h-[780px];
   }
   .slide-four {
-    @apply absolute top-0 -z-10 h-[851px] w-screen translate-x-full bg-[url('/background/services/Background4@2x_result.webp')] bg-cover bg-center md:h-[780px];
+    @apply absolute top-0 -z-10 h-[851px] w-screen translate-x-full md:h-[780px];
   }
   .slide-five {
-    @apply absolute top-0 -z-10 h-[851px] w-screen translate-x-full bg-[url('/background/services/Background5@2x_result.webp')] bg-cover bg-center md:h-[780px];
+    @apply absolute top-0 -z-10 h-[851px] w-screen translate-x-full md:h-[780px];
   }
   .active-slide {
     @apply animate-[sliderForward_320ms_ease-in_forwards];
@@ -138,7 +134,7 @@
     @apply h-fit w-screen relative xl:py-20;
   }
   .career-bg{
-    @apply bg-cover bg-center absolute top-0 -z-10 w-screen bg-[url('/background/career/career@2x.webp')] h-full;
+    @apply absolute top-0 -z-10 w-screen h-full;
   }
   .career-list {
     @apply gap-6 md:mb-6 xl:mb-[21px] xl:flex;
@@ -170,7 +166,7 @@
     @apply h-fit w-screen relative xl:py-20;
   }
   .gallery-bg{
-    @apply bg-cover bg-center absolute top-0 -z-10 w-screen bg-[url('/background/gallery/gallery@2x.webp')] h-full;
+    @apply absolute top-0 -z-10 w-screen h-full;
   }
   .active-image {
     @apply mx-auto;
@@ -188,7 +184,10 @@
 
     /*CONTACTS*/
     .contacts{
-      @apply h-fit w-screen bg-[url('/background/contacts/contacts@2x.webp')] bg-cover bg-center xl:py-20;
+      @apply h-fit w-screen relative xl:py-20;
+    }
+    .contacts-bg{
+      @apply absolute top-0 -z-10 w-screen h-full;
     }
     .contact-list-item{
       @apply flex gap-5;

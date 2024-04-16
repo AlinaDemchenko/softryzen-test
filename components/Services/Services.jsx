@@ -21,28 +21,6 @@ function Services() {
     slideNum: "01",
   });
 
-  const getImageData = () => {
-    if (isDesktop) {
-      return {
-        src: `/images/services/desktop/Photo${slideData.slideNum}@2x_result.webp`,
-        width: 607,
-        height: 429,
-      };
-    } else if (isTablet) {
-      return {
-        src: `/images/services/tablet/Photo${slideData.slideNum}@2x_tab.webp`,
-        width: 463,
-        height: 370,
-      };
-    } else {
-      return {
-        src: `/images/services/mobile/Photo${slideData.slideNum}@2x_mob.webp`,
-        width: 280,
-        height: 213,
-      };
-    }
-  };
-
   const imageStyle = {
     margin: "0 auto 12px",
   };
@@ -64,24 +42,65 @@ function Services() {
 
   return (
     <section id="services" className="services">
-      <div id="background" className="slide-one active-slide"></div>
-      <div className="slide-two"></div>
-      <div className="slide-three"></div>
-      <div className="slide-four"></div>
-      <div className="slide-five"></div>
+      <div className="slide-one active-slide">
+        <Image
+          src="/background/services/Background@2x_result.webp"
+          alt="ATVs Traveling"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+        />
+      </div>
+      <div className="slide-two">
+        <Image
+          src="/background/services/Background2@2x_result.webp"
+          alt="Rock climbing"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+        />
+      </div>
+      <div className="slide-three">
+        <Image
+          src="/background/services/Background3@2x_result.webp"
+          alt="Hot air balloon"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+        />
+      </div>
+      <div className="slide-four">
+        <Image
+          src="/background/services/Background4@2x_result.webp"
+          alt="Skydiving"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+        />
+      </div>
+      <div className="slide-five">
+        <Image
+          src="/background/services/Background5@2x_result.webp"
+          alt="Rafting"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+        />
+      </div>
       <div className="section-container xl:h-[619px]">
-        <div className="max-md:w-[280px] max-md:mx-auto md:mr-5 xl:mr-[13px]">
+        <div className="max-md:mx-auto max-md:w-[280px] md:mr-5 xl:mr-[13px]">
           <h2 className="title mb-6 md:mb-9 md:leading-tight xl:mb-[23px]">
             WE <span className="font-medium">OFFER</span>
           </h2>
           {isMobile && <SlideNumber number={slideData.slideNum} />}
-          <Image
-            style={isMobile ? imageStyle : ""}
-            src={getImageData().src}
-            width={getImageData().width}
-            height={getImageData().height}
-            alt="Picture of the author"
-          />
+          <div className="relative h-[213px] w-[280px] md:h-[370px] md:w-[463px] xl:h-[429px] xl:w-[607px]">
+            <Image
+              style={isMobile ? imageStyle : ""}
+              src={`/images/services/desktop/Photo${slideData.slideNum}@2x_result.webp`}
+              layout="fill"
+              alt="Photo of the activity"
+            />
+          </div>
           {isMobile && <SloganList slideData={slideData.slideNum} />}
         </div>
         <div className="md:w-[221px] xl:mr-[59px] xl:w-[257px]">

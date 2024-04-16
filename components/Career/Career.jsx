@@ -1,6 +1,7 @@
 "use client";
 import CareerList from "./CareerList";
 import CareerForm from "./CareerForm";
+import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 
 function Career() {
@@ -15,7 +16,15 @@ function Career() {
   return (
     <>
       <section id="career" className="career">
-        <div className="career-bg"></div>
+        <div className="career-bg">
+          <Image
+            src="/background/career/career@2x.webp"
+            alt="guide"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+          />
+        </div>
         <div className="section-container gap-x-6 md:pl-7 xl:pl-6">
           <div>
             <h2 className="title mb-6 inline-block align-top md:mb-0 md:leading-tight xl:mb-6 xl:align-baseline">
