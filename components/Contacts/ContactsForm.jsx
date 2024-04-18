@@ -18,12 +18,12 @@ function ContactsForm() {
       email: "",
       message: "",
     },
+    mode: "onChange",
   });
 
   return (
     <form
-      action=""
-      className="md:flex xl:w-[607px] md:flex-wrap md:gap-x-5"
+      className="md:flex md:flex-wrap md:gap-x-5 xl:w-[607px]"
       onSubmit={handleSubmit((data) => {
         console.log(data);
         reset();
@@ -31,20 +31,26 @@ function ContactsForm() {
     >
       {!isDesktop && (
         <div>
-          <div className="relative md:w-[221px] mb-[25px] md:mb-[28px] xl:mb-7">
+          <div className="relative mb-[25px] md:mb-[28px] md:w-[221px] xl:mb-7">
             <label className="detailed-text mb-1 block" htmlFor="name">
               Full name
             </label>
             <input
-              {...register("name", { required: "Incorrect name" })}
+              {...register("name", {
+                required: "Incorrect name",
+                minLength: { value: 2, message: "Incorrect name" },
+                maxLength: { value: 60, message: "Incorrect name" },
+                pattern: {
+                  value:
+                    /^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/i,
+                  message: "Incorrect name",
+                },
+              })}
               className={`input ${errors.name ? "text-[#FF5757]" : ""}`}
               placeholder="John Smith"
               type="text"
               id="name"
               name="name"
-              minLength="2"
-              maxLength="60"
-              pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             />
             {errors.name && (
               <p className="form-error"> {errors.name.message}</p>
@@ -55,13 +61,19 @@ function ContactsForm() {
               E-mail
             </label>
             <input
-              {...register("email", { required: "Invalid email" })}
+              {...register("email", {
+                required: "Invalid email",
+                maxLength: { value: 60, message: "Invalid email" },
+                pattern: {
+                  value: /^\S+@\S+$/i,
+                  message: "Invalid email",
+                },
+              })}
+              type="email"
               className={`input ${errors.email ? "text-[#FF5757]" : ""}`}
               placeholder="johnsmith@email.com"
-              type="email"
               id="email"
               name="email"
-              maxLength="60"
             />
             {errors.email && (
               <p className="form-error">{errors.email.message}</p>
@@ -75,15 +87,21 @@ function ContactsForm() {
             Full name
           </label>
           <input
-            {...register("name", { required: "Incorrect name" })}
+            {...register("name", {
+              required: "Incorrect name",
+              minLength: { value: 2, message: "Incorrect name" },
+              maxLength: { value: 60, message: "Incorrect name" },
+              pattern: {
+                value:
+                  /^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/i,
+                message: "Incorrect name",
+              },
+            })}
             className={`input ${errors.name ? "text-[#FF5757]" : ""}`}
             placeholder="John Smith"
             type="text"
             id="name"
             name="name"
-            minLength="2"
-            maxLength="60"
-            pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           />
           {errors.name && <p className="form-error"> {errors.name.message}</p>}
         </div>
@@ -94,13 +112,19 @@ function ContactsForm() {
             E-mail
           </label>
           <input
-            {...register("email", { required: "Invalid email" })}
+            {...register("email", {
+              required: "Invalid email",
+              maxLength: { value: 60, message: "Invalid email" },
+              pattern: {
+                value: /^\S+@\S+$/i,
+                message: "Invalid email",
+              },
+            })}
+            type="email"
             className={`input ${errors.email ? "text-[#FF5757]" : ""}`}
             placeholder="johnsmith@email.com"
-            type="email"
             id="email"
             name="email"
-            maxLength="60"
           />
           {errors.email && <p className="form-error">{errors.email.message}</p>}
         </div>
@@ -114,7 +138,7 @@ function ContactsForm() {
           name="message"
           id="message"
           rows="10"
-          className="input mb-4 xl:mb-6 h-[221px] xl:h-[174px] md:w-[463px] xl:w-[607px] resize-none"
+          className="input mb-4 h-[221px] resize-none md:w-[463px] xl:mb-6 xl:h-[174px] xl:w-[607px]"
           minLength="2"
           maxLength="600"
         ></textarea>

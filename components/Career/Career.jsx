@@ -71,7 +71,15 @@ function Career() {
       </section>
       {isMobile && (
         <section className="career">
-          <div className="career-bg"></div>
+          <div className="career-bg">
+            <Image
+              src="/background/career/career@2x.webp"
+              alt="guide"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+            />
+          </div>
           <div className="section-container gap-x-6 md:pl-7 xl:pl-6">
             <p className="descr mb-6 ml-auto w-[179px]">
               Don&apos;t miss your opportunity! <br /> Fill out the form right
