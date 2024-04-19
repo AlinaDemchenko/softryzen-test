@@ -8,6 +8,12 @@ import { useEffect, useRef } from "react";
 function Hero() {
   const sectionRef = useRef(null);
 
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    console.log('Темная цветовая схема');
+  } else {
+    console.log('Светлая цветовая схема');
+  }
+
   useEffect(() => {
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
