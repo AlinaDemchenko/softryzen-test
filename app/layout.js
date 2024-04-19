@@ -20,11 +20,6 @@ export const metadata = {
     ],
   },
 };
-// icon: [
-//   { url: 'icons/favicon_light.png' },
-//   // new URL('/icon.png', 'https://example.com'),
-//   { url: 'icons/favicon_dark.png', media: '(prefers-color-scheme: dark)' },
-// ],
 
 export default function RootLayout({ children }) {
   return (
@@ -32,6 +27,7 @@ export default function RootLayout({ children }) {
       <body>
         <HeaderLayout />
         {children}
+        <div id='portal'></div>
       </body>
     </html>
   );

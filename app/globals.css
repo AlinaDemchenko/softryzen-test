@@ -13,18 +13,22 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    @apply h-screen overflow-y-auto overscroll-y-contain;
+    @media only screen and (min-width: 768px) {
+      scroll-snap-type: y mandatory;
+    }
   }
 
   body {
     @apply bg-[rgb(23,36,41)] font-sans text-white;
   }
 
-  main {
+  /* main {
     @apply h-screen overflow-y-auto overscroll-y-contain;
     @media only screen and (min-width: 768px) {
       scroll-snap-type: y mandatory;
     }
-  }
+  } */
 
   main > * {
     @apply h-full w-screen;
@@ -60,7 +64,7 @@
 
   /*HEADER/MOBILE-MENU*/
   .header {
-    @apply absolute  left-1/2 top-0 z-10 flex w-screen -translate-x-1/2 transform justify-between px-5 pt-9 md:w-full md:px-8 md:pt-[25px] xl:w-[1235px] xl:justify-center xl:px-0 xl:pt-6;
+    @apply absolute left-1/2 top-0 z-10 flex w-screen -translate-x-1/2 transform justify-between px-5 pt-9 md:w-full md:px-8 md:pt-[25px] xl:w-[1235px] xl:justify-center xl:px-0 xl:pt-6;
   }
   .nav-list {
     @apply mx-auto flex h-[302px] w-fit flex-col justify-between text-center text-lg tracking-widest md:mt-[11px] md:block md:h-fit md:text-left md:text-sm;
