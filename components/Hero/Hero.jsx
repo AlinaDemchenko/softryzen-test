@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import SectionTitle from "./SectionTitle";
 import Link from "next/link";
 import Image from "next/image";
@@ -24,7 +24,7 @@ function Hero() {
     const observer = new IntersectionObserver(handleIntersection, {
       threshold: 0,
     });
-    if (sectionRefCurrentt) {
+    if (sectionRefCurrent) {
       observer.observe(sectionRefCurrent);
     }
 
