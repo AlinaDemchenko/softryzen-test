@@ -1,15 +1,8 @@
-"use client";
 import GallerySwiper from "./GallerySwiper";
 import GalleryList from "./GalleryList";
 import Image from "next/image";
-import { useMediaQuery } from "react-responsive";
 
 function Gallery() {
-  const isDesktop = useMediaQuery({
-    query: "(min-width: 1440px)",
-  });
-
-  const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return (
     <section id="gallery" className="gallery">
@@ -27,8 +20,14 @@ function Gallery() {
           OUR <span className="font-medium">GALLERY</span>
         </h2>
         <div>
-          {!isMobile && <GallerySwiper isDesktop={isDesktop} />}
-          {isMobile && <GalleryList />}
+           <div className="hidden md:block">
+             <GallerySwiper />
+           </div>
+          {/* {isMobile &&  */}
+          <div className="md:hidden">
+            <GalleryList />
+          </div>
+          {/* } */}
         </div>
       </div>
     </section>

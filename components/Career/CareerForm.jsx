@@ -2,7 +2,7 @@
 import { useForm } from "react-hook-form";
 import InputMask from "react-input-mask";
 
-function CareerForm({ query }) {
+function CareerForm() {
   const {
     register,
     handleSubmit,
@@ -16,7 +16,7 @@ function CareerForm({ query }) {
       phone: "",
       message: "",
     },
-    mode: "onChange"
+    mode: "onBlur"
   });
 
   return (
@@ -114,8 +114,7 @@ function CareerForm({ query }) {
             <p className="form-error top-7">{errors.phone.message}</p>
           )}
         </div>
-        {!query && (
-          <div className="flex gap-x-2">
+          <div className="gap-x-2 hidden md:flex">
             <input
               {...register("confirmation", { required: true })}
               id="confirmation"
@@ -131,7 +130,6 @@ function CareerForm({ query }) {
               I confirm my consent to the processing of personal data.
             </label>
           </div>
-        )}
       </div>
       <div>
         <label className="detailed-text mb-1 block" htmlFor="message">
@@ -146,8 +144,7 @@ function CareerForm({ query }) {
           minLength="2"
           maxLength="600"
         ></textarea>
-        {query && (
-          <div className="mb-4 flex gap-x-2">
+          <div className="mb-4 flex gap-x-2 md:hidden">
             <input
               {...register("confirmation", { required: true })}
               id="confirmation"
@@ -163,7 +160,6 @@ function CareerForm({ query }) {
               I confirm my consent to the processing of personal data.
             </label>
           </div>
-        )}
         <button type="submit" className="career-button">
           SEND
         </button>

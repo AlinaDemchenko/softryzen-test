@@ -3,8 +3,12 @@ import Header from "./Header";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import Navigation from "../MobileMenu/Navigation";
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 export default function HeaderLayout() {
+  const isDesktopOrLaptop = useMediaQuery({
+    query: "(min-width: 768px)",
+  });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleToggleMenu = () => {
@@ -19,7 +23,7 @@ export default function HeaderLayout() {
         </MobileMenu>
       )}
       <Header onToggleMenu={handleToggleMenu}>
-        <Navigation onToggleMenu={handleToggleMenu} />
+        <Navigation onToggleMenu={handleToggleMenu} mediaQuery={isDesktopOrLaptop}/>
       </Header>
     </div>
   );

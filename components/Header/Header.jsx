@@ -1,13 +1,8 @@
-"use client";
 import Image from "next/image";
 import logo from "../../public/icons/Rectangle.svg";
 import PropTypes from 'prop-types';
-import { useMediaQuery } from "react-responsive";
 
 function Header({children, onToggleMenu}) {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: "(min-width: 768px)",
-  });
 
   return (
     <header className="header">
@@ -21,7 +16,6 @@ function Header({children, onToggleMenu}) {
           CarpTravel
         </span>
       </div>
-      {!isDesktopOrLaptop && (
         <button
           type="button"
           onClick={onToggleMenu}
@@ -29,8 +23,7 @@ function Header({children, onToggleMenu}) {
         >
           MENU
         </button>
-      )}
-      {isDesktopOrLaptop && children}
+      <div className="hidden md:block">{children}</div>
     </header>
   );
 }

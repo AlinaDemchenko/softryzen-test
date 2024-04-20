@@ -1,16 +1,11 @@
-'use client'
-
 import Link from "next/link";
 import PropTypes from 'prop-types';
-import { useMediaQuery } from "react-responsive";
 
-function Navigation({onToggleMenu}) {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: "(min-width: 768px)",
-  });
+function Navigation({onToggleMenu, mediaQuery}) {
+
   const handlerClick = () => {
     if (!onToggleMenu) return
-    if ( !isDesktopOrLaptop){
+    if ( !mediaQuery){
       onToggleMenu();
     }
   };

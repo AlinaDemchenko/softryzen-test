@@ -1,12 +1,18 @@
 "use client";
+import { useMediaQuery } from "react-responsive";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation } from "swiper/modules";
+import Image from "next/image";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
-import Image from "next/image";
 
-function GallerySwiper({ isDesktop }) {
+function GallerySwiper() {
+  
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 1440px)",
+  });
+
   const stretchValue = isDesktop ? 450 : 550;
   const modifierValue = isDesktop ? 1 : 3;
 
@@ -50,19 +56,19 @@ function GallerySwiper({ isDesktop }) {
           )}
         </SwiperSlide>
       ))}
-       {images.map((image, index) => (
-      <SwiperSlide key={index + images.length}>
-        {({ isActive }) => (
-          <Image
-            className={isActive ? "active-image" : "gallery-image"}
-            src={image.src}
-            width={isDesktop ? "606" : "415"}
-            height={isDesktop ? "429" : "294"}
-            alt={image.alt}
-          />
-        )}
-      </SwiperSlide>
-    ))}
+      {images.map((image, index) => (
+        <SwiperSlide key={index + images.length}>
+          {({ isActive }) => (
+            <Image
+              className={isActive ? "active-image" : "gallery-image"}
+              src={image.src}
+              width={isDesktop ? "606" : "415"}
+              height={isDesktop ? "429" : "294"}
+              alt={image.alt}
+            />
+          )}
+        </SwiperSlide>
+      ))}
       <button className="button-next text-start md:right-[37px] xl:right-[19px]">
         Next
       </button>
