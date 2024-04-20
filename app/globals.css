@@ -13,7 +13,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    @apply h-screen overflow-y-auto overscroll-y-contain;
+    @apply h-screen overflow-y-auto overscroll-y-none;
     @media only screen and (min-width: 768px) {
       scroll-snap-type: y mandatory;
     }
@@ -22,13 +22,6 @@
   body {
     @apply bg-[rgb(23,36,41)] font-sans text-white;
   }
-
-  /* main {
-    @apply h-screen overflow-y-auto overscroll-y-contain;
-    @media only screen and (min-width: 768px) {
-      scroll-snap-type: y mandatory;
-    }
-  } */
 
   main > * {
     @apply h-full w-screen;
