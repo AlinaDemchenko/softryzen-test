@@ -8,13 +8,9 @@ import { useEffect, useRef } from "react";
 function Hero() {
   const sectionRef = useRef(null);
 
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    console.log('Темная цветовая схема');
-  } else {
-    console.log('Светлая цветовая схема');
-  }
-
   useEffect(() => {
+    const sectionRefCurrent = sectionRef.current; 
+
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -28,13 +24,13 @@ function Hero() {
     const observer = new IntersectionObserver(handleIntersection, {
       threshold: 0,
     });
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (sectionRefCurrentt) {
+      observer.observe(sectionRefCurrent);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (sectionRefCurrent) {
+        observer.unobserve(sectionRefCurrent);
       }
     };
   }, []);
