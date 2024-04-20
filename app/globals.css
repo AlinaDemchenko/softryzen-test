@@ -68,7 +68,7 @@
 
   /*HERO*/
   .hero {
-    @apply h-fit left-0 top-0 w-screen pt-[50px] md:pt-[60px] xl:pb-[80px] xl:pt-[106px] relative overflow-x-hidden;
+    @apply h-fit left-0 top-0 w-screen pt-[50px] md:pt-[60px] xl:pb-[80px] xl:pt-[106px] relative overflow-hidden;
   }
   .hero-bg{
    @apply absolute top-0 -z-20 w-screen h-full; 
